@@ -8,6 +8,7 @@ namespace tpmodul7_kelompok_7
         static void Main(string[] args)
         {
             DataMahasiswa103022300035.ReadJSON();
+            KuliahMahasiswa1030223300035.ReadJSON();
         }
     }
 }
