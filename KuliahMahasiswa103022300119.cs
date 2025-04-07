@@ -23,12 +23,12 @@ namespace tpmodul7_kelompok_7
         public List<Course> Courses { get; set; }
     }
 
-    public class KuliahMahasiswa103022330138
+    public class KuliahMahasiswa103022300119
     {
         public static void ReadJSON()
         {
 
-            string filePath = @"../../../tp7_2_103022330138.json"; 
+            string filePath = @"../../../tp7_2_103022300119.json"; 
             string jsonString = File.ReadAllText(filePath);
 
             var options = new JsonSerializerOptions
