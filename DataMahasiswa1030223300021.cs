@@ -1,7 +1,10 @@
 ﻿using System;
-using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using System.Threading.Tasks;
 
 namespace tpmodul7_kelompok_7
 {
@@ -25,22 +28,22 @@ namespace tpmodul7_kelompok_7
         [JsonPropertyName("fakultas")]
         public string Fakultas { get; set; }
     }
-
-    public class DataMahasiswa103022330138
+    class DataMahasiswa1030223300021
     {
         public static void ReadJSON()
         {
-                string filePath = @"../../../tp7_1_103022330138.json";
-                string jsonString = File.ReadAllText(filePath);
+            string filePath = @"../../../tp7_1_1030223300021.json";
+            string jsonString = File.ReadAllText(filePath);
 
-                var options = new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true
-                };
+            var options = new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            };
 
-                Mahasiswa data = JsonSerializer.Deserialize<Mahasiswa>(jsonString, options);
+            Mahasiswa data = JsonSerializer.Deserialize<Mahasiswa>(jsonString, options);
 
-                Console.WriteLine($"Nama {data.Nama.Depan} {data.Nama.Belakang} dengan nim {data.Nim} dari fakultas {data.Fakultas}");
+            Console.WriteLine($"Nama {data.Nama.Depan} {data.Nama.Belakang} dengan nim {data.Nim} dari fakultas {data.Fakultas}");
         }
+
     }
 }
