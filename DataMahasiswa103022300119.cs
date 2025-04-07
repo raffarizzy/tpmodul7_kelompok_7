@@ -26,12 +26,12 @@ namespace tpmodul7_kelompok_7
         public string Fakultas { get; set; }
     }
 
-    public class DataMahasiswa103022330138
+    public class DataMahasiswa103022300119
     {
         public static void ReadJSON()
         {
-                string filePath = @"../../../tp7_1_103022330138.json";
-                string jsonString = File.ReadAllText(filePath);
+                string filePath = @"../../../tp7_1_103022300119.json";
+            string jsonString = File.ReadAllText(filePath);
 
                 var options = new JsonSerializerOptions
                 {
