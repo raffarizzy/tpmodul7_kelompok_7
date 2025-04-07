@@ -5,7 +5,7 @@ using System.Text.Json.Serialization;
 
 namespace tpmodul7_kelompok_7
 {
-    public class NamaBagas
+    public class Nama
     {
         [JsonPropertyName("depan")]
         public string Depan { get; set; }
@@ -14,10 +14,10 @@ namespace tpmodul7_kelompok_7
         public string Belakang { get; set; }
     }
 
-    public class MahasiswaBagas
+    public class Mahasiswa
     {
         [JsonPropertyName("nama")]
-        public NamaBagas Nama { get; set; }
+        public Nama Nama { get; set; }
 
         [JsonPropertyName("nim")]
         public long Nim { get; set; }
@@ -26,11 +26,11 @@ namespace tpmodul7_kelompok_7
         public string Fakultas { get; set; }
     }
 
-    public class DataMahasiswa103022300035
+    public class DataMahasiswa103022330138
     {
         public static void ReadJSON()
         {
-                string filePath = @"../../../tp7_1_103022300035.json";
+                string filePath = @"../../../tp7_1_103022330138.json";
                 string jsonString = File.ReadAllText(filePath);
 
                 var options = new JsonSerializerOptions
@@ -38,7 +38,7 @@ namespace tpmodul7_kelompok_7
                     PropertyNameCaseInsensitive = true
                 };
 
-                MahasiswaBagas data = JsonSerializer.Deserialize<MahasiswaBagas>(jsonString, options);
+                Mahasiswa data = JsonSerializer.Deserialize<Mahasiswa>(jsonString, options);
 
                 Console.WriteLine($"Nama {data.Nama.Depan} {data.Nama.Belakang} dengan nim {data.Nim} dari fakultas {data.Fakultas}");
         }

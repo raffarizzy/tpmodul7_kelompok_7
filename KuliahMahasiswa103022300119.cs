@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace tpmodul7_kelompok_7
 {
-    public class Course
+    public class CourseRiziq
     {
         [JsonPropertyName("code")]
         public string Code { get; set; }
@@ -17,10 +17,10 @@ namespace tpmodul7_kelompok_7
         public string Name { get; set; }
     }
 
-    public class CourseList
+    public class CourseListRiziq
     {
         [JsonPropertyName("courses")]
-        public List<Course> Courses { get; set; }
+        public List<CourseRiziq> Courses { get; set; }
     }
 
     public class KuliahMahasiswa103022300119
@@ -36,7 +36,7 @@ namespace tpmodul7_kelompok_7
                 PropertyNameCaseInsensitive = true
             };
 
-            CourseList data = JsonSerializer.Deserialize<CourseList>(jsonString, options);
+            CourseListRiziq data = JsonSerializer.Deserialize<CourseListRiziq>(jsonString, options);
 
             Console.WriteLine("Daftar mata kuliah yang diambil:");
             int i = 1;

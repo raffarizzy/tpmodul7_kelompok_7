@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace tpmodul7_kelompok_7
 {
-    public class Nama
+    public class NamaDzul
     {
         [JsonPropertyName("depan")]
         public string Depan { get; set; }
@@ -17,10 +17,10 @@ namespace tpmodul7_kelompok_7
         public string Belakang { get; set; }
     }
 
-    public class Mahasiswa
+    public class MahasiswaDzul
     {
         [JsonPropertyName("nama")]
-        public Nama Nama { get; set; }
+        public NamaDzul Nama { get; set; }
 
         [JsonPropertyName("nim")]
         public long Nim { get; set; }
@@ -40,7 +40,7 @@ namespace tpmodul7_kelompok_7
                 PropertyNameCaseInsensitive = true
             };
 
-            Mahasiswa data = JsonSerializer.Deserialize<Mahasiswa>(jsonString, options);
+            MahasiswaDzul data = JsonSerializer.Deserialize<MahasiswaDzul>(jsonString, options);
 
             Console.WriteLine($"Nama {data.Nama.Depan} {data.Nama.Belakang} dengan nim {data.Nim} dari fakultas {data.Fakultas}");
         }
